@@ -4,10 +4,11 @@ def reverseString(string):
     return reverseString(string[1:]) + string[0]
 
 def reverseStringAlter(string):
-    n = len(string)
-    if n==0:
+    if len(string)==0:
         return ""
-    return string[n-1] + reverseStringAlter(string[0:n-1])
+    return string[-1] + reverseStringAlter(string[0:-1])
+
+
 
 #Driver code
 if __name__ == "__main__":
