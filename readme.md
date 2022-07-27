@@ -6,3 +6,5 @@ I will also log important or interesting things here.
 My schedule will be based on [this](https://whimsical.com/dsa-in-90-days-EmPkf5utoFGRMnRqJjM6YV) graph.
 
 <hr>
+
+I have started the course today.
