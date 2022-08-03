@@ -8,3 +8,8 @@ My schedule will be based on [this](https://whimsical.com/dsa-in-90-days-EmPkf5u
 <hr>
 
 I have started the course today.
+
+<hr>
+
+## 3 August 2022 1258 hrs
+I have been ill for the last few days and couldn't study. Gotta pick up the pace and clear the backlog now.
