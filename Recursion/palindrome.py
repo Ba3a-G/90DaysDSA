@@ -3,10 +3,7 @@ def isPalindrome(string):
     string = string.lower()
     if n<2:
         return True
-    if string[0] == string[n-1]:
-        return isPalindrome(string[1:n-1])
-    else:
-        return False
+    return isPalindrome(string[1:n-1]) if string[0] == string[n-1] else False
 
 def isPalindromeAliter(string):
     mid = len(string)//2
@@ -14,10 +11,7 @@ def isPalindromeAliter(string):
     right = ""
     for i in range(1,mid+1):
         right += string[-i]
-    if left == right:
-        return True
-    else:
-        return False
+    return True if left == right else False
 
 #Driver code
 if __name__ == "__main__":
