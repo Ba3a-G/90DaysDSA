@@ -8,6 +8,17 @@ def isPalindrome(string):
     else:
         return False
 
+def isPalindromeAliter(string):
+    mid = len(string)//2
+    left = string[0:mid]
+    right = ""
+    for i in range(1,mid+1):
+        right += string[-i]
+    if left == right:
+        return True
+    else:
+        return False
+
 #Driver code
 if __name__ == "__main__":
     print("I can check if a string is a palindrome.")
