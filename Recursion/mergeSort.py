@@ -1,19 +1,26 @@
-def merge(array1, array2):
-    mergedArray = []
-    visited = []
-    while len(array1) !=0 and len(array2) !=0:
-        for i in array1:
-            if i < array2[0]:
-                mergedArray.append(i)
-                visited.append(i)
-            else:
-                mergedArray.append(array2[0])
-                array2.remove(array2[0])
-        for k in visited:
-            array1.remove(k)
-        visited=[]
-    remaining = array1+array2
-    mergedArray.extend(remaining)
-    return mergedArray
+from merge import *
 
-print(merge([5, 9, 150], [1, 16, 17, 20, 23, 25, 26, 34, 54, 65, 78, 99]))
+def mergeSort(array):
+    if len(array) < 2:
+        return array
+
+    midPoint = len(array)//2
+    leftPortion = mergeSort(array[:midPoint])
+    rightPortion = mergeSort(array[midPoint:])
+    return merge(leftPortion, rightPortion)
+
+#Driver Code
+testCases = [
+    [-2, 5, 4, 3, 3, 21],
+    [],
+    [21, 20, 19, 18],
+    [1, 5000, 10000, 20000],
+    [1, "a", 20, 19],
+    [1.5, 7, 1000.5]
+]
+
+for i in testCases:
+    try:
+        print(mergeSort(i))
+    except Exception as e:
+        print(e)
