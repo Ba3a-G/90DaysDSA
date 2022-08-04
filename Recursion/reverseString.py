@@ -12,4 +12,10 @@ def reverseStringAlter(string):
 
 #Driver code
 if __name__ == "__main__":
-    print("I can reverse strings. " + reverseString("Like this!"))
+    import argparse
+    parser = argparse.ArgumentParser(description="Reverses the given string.",
+        usage="python reverseString.py 'your string'")
+    parser.add_argument("string", type=str)
+    args = parser.parse_args()
+
+    print(reverseString(args.string))

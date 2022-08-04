@@ -15,6 +15,10 @@ def isPalindromeAliter(string):
 
 #Driver code
 if __name__ == "__main__":
-    print("I can check if a string is a palindrome.")
-    print("Is 'kayak' a palindrome: " + str(isPalindrome("kayak")))
-    print("Is 'banana' a palindrome: " + str(isPalindrome("banana")))
+    import argparse
+    parser = argparse.ArgumentParser(usage="python palindrome.py 'your word'", 
+        description="Tells if the given word is a palindrome")
+    parser.add_argument("word", type = str)
+    args = parser.parse_args()
+    
+    print(isPalindrome(args.word))
