@@ -42,8 +42,31 @@ class LinkedList():
             tailNode = tailNode.nextNode
 
         tailNode.nextNode = Node(data, None)
+    
+    def extend(self, data):
+        n = len(data)
+        if n < 1:
+            return 
+        tempHeadNode = tempTailNode = Node(data[0], None)
+        for i in data[1:]:
+            tempTailNode.nextNode = Node(i, None)
+            tempTailNode = tempTailNode.nextNode
+
+        if self.headNode == None:
+            self.headNode = tempHeadNode
+            return
+
+        tailNode = self.headNode
+        while tailNode.nextNode != None:
+            tailNode = tailNode.nextNode
+
+        tailNode.nextNode = tempHeadNode
+
+            
 
 if __name__ == "__main__":
-    ll = LinkedList()
+    ll = LinkedList(data = [2, 34])
     print("I just created a linked list.")
+    ll.printItems()
+    ll.extend([56])
     ll.printItems()
