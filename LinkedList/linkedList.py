@@ -62,6 +62,15 @@ class LinkedList():
 
         tailNode.nextNode = tempHeadNode
 
+    def insertAfterValue(self, dataAfter, dataToInsert):
+        tailNode = self.headNode
+        while tailNode.nextNode != None or tailNode.data == dataAfter:
+            tailNode = tailNode.nextNode
+        nodeAfterNewNode = tailNode.nextNode
+
+        tailNode.nextNode = Node(dataToInsert, nodeAfterNewNode)
+
+
             
 
 if __name__ == "__main__":
