@@ -70,12 +70,21 @@ class LinkedList():
 
         tailNode.nextNode = Node(dataToInsert, nodeAfterNewNode)
 
-
-            
+    def removeByValue(self, dataToRemove):
+        focusNode = self.headNode
+        while focusNode.data != dataToRemove:
+            prevNode = focusNode
+            focusNode = focusNode.nextNode
+            if focusNode == None:
+                return
+        if focusNode == self.headNode:
+            self.headNode = focusNode.nextNode
+        else:
+            prevNode.nextNode = focusNode.nextNode
+        
 
 if __name__ == "__main__":
-    ll = LinkedList(data = [2, 34])
+    ll = LinkedList(data = [2, 34, 49, 56])
     print("I just created a linked list.")
-    ll.printItems()
-    ll.extend([56])
+    ll.removeByValue(345)
     ll.printItems()
