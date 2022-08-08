@@ -84,7 +84,17 @@ class LinkedList():
         
 
 if __name__ == "__main__":
-    ll = LinkedList(data = [2, 34, 49, 56])
-    print("I just created a linked list.")
-    ll.removeByValue(345)
+    ll = LinkedList()
+    ll.extend(["banana","mango","grapes","orange"])
+    ll.printItems()
+    ll.insertAfterValue("mango","apple") # insert apple after mango
+    ll.printItems()
+    ll.removeByValue("orange") # remove orange from linked list
+    ll.printItems()
+    ll.removeByValue("figs")
+    ll.printItems()
+    ll.removeByValue("banana")
+    ll.removeByValue("mango")
+    ll.removeByValue("apple")
+    ll.removeByValue("grapes")
     ll.printItems()
