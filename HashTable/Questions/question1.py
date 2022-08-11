@@ -18,7 +18,7 @@ def average(arr):
         sum += i
     return sum/len(arr)
 
-file = open("E:/Code/RIB/90DaysDSA/HashTable/Questions/nyc_weather.txt", 'r')
+file = open("nyc_weather.txt", 'r')
 temp = [[] for _ in range(10)]
 templist = [] * 10
 
